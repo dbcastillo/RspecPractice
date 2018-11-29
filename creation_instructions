@@ -1,0 +1,49 @@
+These are instructions for creating a small app (8 steps) to utilize TDD Rspec
+
+1. Create new directory by running "mkdir <filename>" in desired location
+
+2. run "rspec --init" in terminal
+
+3. Create Gemfile in root folder with the following:
+
+   source "https://rubygems.org"
+
+   gem 'rspec', '~> 3.0'
+
+4. Add the following to ".rspec" file
+
+    --color
+    --format documentation
+
+5. run "bundle install --binstubs"
+
+   note: binstubs is a shortcut for always running bundle exec
+   docs: https://bundler.io/man/bundle-binstubs.1.html
+
+6. create ruby file in root folder
+
+   ex:
+
+   what_number_is_kyrie.rb
+
+   def what_number_is_kyrie(number)
+     number = 42
+   end
+
+7. create corresponding spec file in spec folder
+
+   ex:
+
+   what_number_is_kyrie_spec.rb
+
+   require_relative '../what_number_is_kyrie'
+
+   describe "what_number_is_kyrie method" do
+     it "returns Kyrie Irving's current jersey number" do
+       kyrie_number = what_number_is_kyrie(42)
+
+       expect(kyrie_number).to eq(42)
+     end
+   end
+
+8. Test file by running "bin/rspec" in terminal
