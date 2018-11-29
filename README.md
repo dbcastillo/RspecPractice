@@ -35,4 +35,4 @@
 
 * Special thanks to Labs by Flatiron
 
-* Special thanks to Doug U. for being the motivation behind this, even though the Bulls are a better team :)
+* Special thanks to Doug U. for being the motivation behind this, even though I'm a Bulls fan :)
